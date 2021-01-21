@@ -1,14 +1,9 @@
-book_filename: "cartography-course"
+book_filename: "akm-course"
 chapter_name: "Справка "
 output_dir: docs
 rmd_files:
     - "index.Rmd"
-    - "Ref01_Topo.Rmd"
-    - "Ref02_MapMath.Rmd"
-    - "Ref03_MapSymbology.Rmd"
-    - "Ref04_MapCreate.Rmd"
-    - "Ref05_MapGeneralization.Rmd"
-    - "Ref06_MapUse.Rmd"
+    - "01.Rmd"
 delete_merged_file: true
 language:
   label:
