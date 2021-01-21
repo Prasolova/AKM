@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+<head>
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Справка 6 Картографический метод исследования | Картография: практикум в QGIS</title>
+  <meta name="description" content="Справка 6 Картографический метод исследования | Картография: практикум в QGIS" />
+  <meta name="generator" content="bookdown 0.20 and GitBook 2.6.7" />
+
+  <meta property="og:title" content="Справка 6 Картографический метод исследования | Картография: практикум в QGIS" />
+  <meta property="og:type" content="book" />
+  
+  
+  <meta property="og:description" content="Справка 6 Картографический метод исследования | Картография: практикум в QGIS" />
+  <meta name="github-repo" content="iowq750/cartography" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Справка 6 Картографический метод исследования | Картография: практикум в QGIS" />
+  
+  <meta name="twitter:description" content="Справка 6 Картографический метод исследования | Картография: практикум в QGIS" />
+  
+
+<meta name="author" content="Карпачевский А.М." />
+
+
+<meta name="date" content="2020-12-07" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+<link rel="prev" href="map-generalize.html"/>
+
+<script src="libs/jquery-2.2.3/jquery.min.js"></script>
+<link href="libs/gitbook-2.6.7/css/style.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-table.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-bookdown.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-highlight.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-search.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-fontsettings.css" rel="stylesheet" />
+<link href="libs/gitbook-2.6.7/css/plugin-clipboard.css" rel="stylesheet" />
+
+
+
+
+
+
+
+
+
+<script src="libs/accessible-code-block-0.0.1/empty-anchor.js"></script>
+
+
+
+<link rel="stylesheet" href="style.css" type="text/css" />
+</head>
+
+<body>
+
+
+
+  <div class="book without-animation with-summary font-size-2 font-family-1" data-basepath=".">
+
+    <div class="book-summary">
+      <nav role="navigation">
+
+<ul class="summary">
+<li><a href="./">Картография</a></li>
+
+<li class="divider"></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html"><i class="fa fa-check"></i>Программное обеспечение для работы</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#qgis"><i class="fa fa-check"></i>QGIS</a><ul>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#windows"><i class="fa fa-check"></i>Windows</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#macos"><i class="fa fa-check"></i>macOS</a></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#linux"><i class="fa fa-check"></i>Linux</a></li>
+</ul></li>
+<li class="chapter" data-level="" data-path="index.html"><a href="index.html#inkscape"><i class="fa fa-check"></i>Inkscape</a></li>
+</ul></li>
+<li class="chapter" data-level="1" data-path="map-topo.html"><a href="map-topo.html"><i class="fa fa-check"></i><b>1</b> Создание топографического плана</a><ul>
+<li class="chapter" data-level="1.1" data-path="map-topo.html"><a href="map-topo.html#map-topo-csv-table-reading"><i class="fa fa-check"></i><b>1.1</b> Чтение CSV-таблиц</a></li>
+<li class="chapter" data-level="1.2" data-path="map-topo.html"><a href="map-topo.html#map-topo-database"><i class="fa fa-check"></i><b>1.2</b> Создание базы данных для топографического плана</a></li>
+<li class="chapter" data-level="1.3" data-path="map-topo.html"><a href="map-topo.html#map-topo-vectorization"><i class="fa fa-check"></i><b>1.3</b> Векторизация</a></li>
+<li class="chapter" data-level="1.4" data-path="map-topo.html"><a href="map-topo.html#map-topo-symbols"><i class="fa fa-check"></i><b>1.4</b> Оформление в условных знаках</a></li>
+<li class="chapter" data-level="1.5" data-path="map-topo.html"><a href="map-topo.html#map-topo-layout"><i class="fa fa-check"></i><b>1.5</b> Оформление макета</a></li>
+</ul></li>
+<li class="chapter" data-level="2" data-path="map-math.html"><a href="map-math.html"><i class="fa fa-check"></i><b>2</b> Математическая основа карт</a><ul>
+<li class="chapter" data-level="2.1" data-path="map-math.html"><a href="map-math.html#map-math-links"><i class="fa fa-check"></i><b>2.1</b> Полезные ссылки</a></li>
+<li class="chapter" data-level="2.2" data-path="map-math.html"><a href="map-math.html#map-math-initial-data"><i class="fa fa-check"></i><b>2.2</b> Исходные данные</a></li>
+<li class="chapter" data-level="2.3" data-path="map-math.html"><a href="map-math.html#map-math-interface"><i class="fa fa-check"></i><b>2.3</b> Интерфейс QGIS</a></li>
+<li class="chapter" data-level="2.4" data-path="map-math.html"><a href="map-math.html#map-math-crs"><i class="fa fa-check"></i><b>2.4</b> Системы координат</a></li>
+<li class="chapter" data-level="2.5" data-path="map-math.html"><a href="map-math.html#map-math-distortions"><i class="fa fa-check"></i><b>2.5</b> Искажения картографических проекций</a></li>
+<li class="chapter" data-level="2.6" data-path="map-math.html"><a href="map-math.html#map-math-tissot"><i class="fa fa-check"></i><b>2.6</b> Построение эллипсов искажения в QGIS</a></li>
+<li class="chapter" data-level="2.7" data-path="map-math.html"><a href="map-math.html#map-math-layout"><i class="fa fa-check"></i><b>2.7</b> Работа с компоновкой в QGIS</a></li>
+<li class="chapter" data-level="2.8" data-path="map-math.html"><a href="map-math.html#map-math-issues"><i class="fa fa-check"></i><b>2.8</b> Варианты решения некоторых технических проблем</a><ul>
+<li class="chapter" data-level="2.8.1" data-path="map-math.html"><a href="map-math.html#map-math-issues-ellipses"><i class="fa fa-check"></i><b>2.8.1</b> Некорректное построение эллипсов искажений и координатной сетки</a></li>
+<li class="chapter" data-level="2.8.2" data-path="map-math.html"><a href="map-math.html#map-math-issues-selfintersecting"><i class="fa fa-check"></i><b>2.8.2</b> Некорректное отображение геометрии</a></li>
+</ul></li>
+</ul></li>
+<li class="chapter" data-level="3" data-path="map-symbology.html"><a href="map-symbology.html"><i class="fa fa-check"></i><b>3</b> Способы изображения и графические средства</a><ul>
+<li class="chapter" data-level="3.1" data-path="map-symbology.html"><a href="map-symbology.html#map-symbology-initial-data"><i class="fa fa-check"></i><b>3.1</b> Исходные данные</a></li>
+<li class="chapter" data-level="3.2" data-path="map-symbology.html"><a href="map-symbology.html#map-symbology-variables"><i class="fa fa-check"></i><b>3.2</b> Графические переменные</a></li>
+<li class="chapter" data-level="3.3" data-path="map-symbology.html"><a href="map-symbology.html#map-symbology-methods"><i class="fa fa-check"></i><b>3.3</b> Способы изображения</a></li>
+</ul></li>
+<li class="chapter" data-level="4" data-path="map-create.html"><a href="map-create.html"><i class="fa fa-check"></i><b>4</b> Составление географической карты</a><ul>
+<li class="chapter" data-level="4.1" data-path="map-create.html"><a href="map-create.html#map-create-initial-data"><i class="fa fa-check"></i><b>4.1</b> Исходные данные</a></li>
+<li class="chapter" data-level="4.2" data-path="map-create.html"><a href="map-create.html#map-create-database"><i class="fa fa-check"></i><b>4.2</b> Создание базы пространственных данных</a></li>
+<li class="chapter" data-level="4.3" data-path="map-create.html"><a href="map-create.html#map-create-vectorize"><i class="fa fa-check"></i><b>4.3</b> Векторизация</a></li>
+<li class="chapter" data-level="4.4" data-path="map-create.html"><a href="map-create.html#map-create-attributes"><i class="fa fa-check"></i><b>4.4</b> Работа с атрибутами</a></li>
+<li class="chapter" data-level="4.5" data-path="map-create.html"><a href="map-create.html#map-create-symbology"><i class="fa fa-check"></i><b>4.5</b> Настройка символики</a><ul>
+<li class="chapter" data-level="4.5.1" data-path="map-create.html"><a href="map-create.html#map-create-symbology-simple"><i class="fa fa-check"></i><b>4.5.1</b> Использование простой символики</a></li>
+<li class="chapter" data-level="4.5.2" data-path="map-create.html"><a href="map-create.html#map-create-symbology-charts"><i class="fa fa-check"></i><b>4.5.2</b> Использование графических средств диаграмм</a></li>
+</ul></li>
+<li class="chapter" data-level="4.6" data-path="map-create.html"><a href="map-create.html#map-create-labeling"><i class="fa fa-check"></i><b>4.6</b> Настройка подписей</a></li>
+<li class="chapter" data-level="4.7" data-path="map-create.html"><a href="map-create.html#map-create-fake-symbology"><i class="fa fa-check"></i><b>4.7</b> Имитация некоторых сложных графических средств и способов изображения</a></li>
+<li class="chapter" data-level="4.8" data-path="map-create.html"><a href="map-create.html#map-create-legend"><i class="fa fa-check"></i><b>4.8</b> Работа с легендой в компоновке</a></li>
+<li class="chapter" data-level="4.9" data-path="map-create.html"><a href="map-create.html#map-create-inkscape"><i class="fa fa-check"></i><b>4.9</b> Редактирование карты в графическом пакете</a></li>
+</ul></li>
+<li class="chapter" data-level="5" data-path="map-generalize.html"><a href="map-generalize.html"><i class="fa fa-check"></i><b>5</b> Картографическая генерализация</a><ul>
+<li class="chapter" data-level="5.1" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-initial-data"><i class="fa fa-check"></i><b>5.1</b> Исходные данные</a></li>
+<li class="chapter" data-level="5.2" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-methods"><i class="fa fa-check"></i><b>5.2</b> Приёмы генерализации</a></li>
+<li class="chapter" data-level="5.3" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-preprocessing"><i class="fa fa-check"></i><b>5.3</b> Подготовка данных</a></li>
+<li class="chapter" data-level="5.4" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-manual"><i class="fa fa-check"></i><b>5.4</b> Ручные приёмы работы с геометрией</a></li>
+<li class="chapter" data-level="5.5" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-automate"><i class="fa fa-check"></i><b>5.5</b> Автоматизированные приёмы работы с геометрией</a></li>
+<li class="chapter" data-level="5.6" data-path="map-generalize.html"><a href="map-generalize.html#map-generalize-geometry-sql"><i class="fa fa-check"></i><b>5.6</b> Ценз отбора через SQL-запрос</a></li>
+</ul></li>
+<li class="chapter" data-level="6" data-path="map-use.html"><a href="map-use.html"><i class="fa fa-check"></i><b>6</b> Картографический метод исследования</a><ul>
+<li class="chapter" data-level="6.1" data-path="map-use.html"><a href="map-use.html#map-use-initial-data"><i class="fa fa-check"></i><b>6.1</b> Исходные данные</a></li>
+<li class="chapter" data-level="6.2" data-path="map-use.html"><a href="map-use.html#map-use-links"><i class="fa fa-check"></i><b>6.2</b> Полезные ссылки с пространственными данными</a></li>
+<li class="chapter" data-level="6.3" data-path="map-use.html"><a href="map-use.html#map-use-methods"><i class="fa fa-check"></i><b>6.3</b> Приёмы использования карт</a></li>
+<li class="chapter" data-level="6.4" data-path="map-use.html"><a href="map-use.html#map-use-grid"><i class="fa fa-check"></i><b>6.4</b> Построение регулярных сеток</a></li>
+<li class="chapter" data-level="6.5" data-path="map-use.html"><a href="map-use.html#map-use-calculation"><i class="fa fa-check"></i><b>6.5</b> Расчёт значений на сетку территориального деления</a></li>
+<li class="chapter" data-level="6.6" data-path="map-use.html"><a href="map-use.html#map-use-surface"><i class="fa fa-check"></i><b>6.6</b> Построение геополей</a></li>
+</ul></li>
+<li class="divider"></li>
+<li><a href="https://github.com/rstudio/bookdown" target="blank">Published with bookdown</a></li>
+
+</ul>
+
+      </nav>
+    </div>
+
+    <div class="book-body">
+      <div class="body-inner">
+        <div class="book-header" role="navigation">
+          <h1>
+            <i class="fa fa-circle-o-notch fa-spin"></i><a href="./">Картография: практикум в QGIS</a>
+          </h1>
+        </div>
+
+        <div class="page-wrapper" tabindex="-1" role="main">
+          <div class="page-inner">
+
+            <section class="normal" id="section-">
+<div id="map-use" class="section level1">
+<h1><span class="header-section-number">Справка 6</span> Картографический метод исследования</h1>
+<div id="map-use-initial-data" class="section level2">
+<h2><span class="header-section-number">6.1</span> Исходные данные</h2>
+<p><a href="https://yadi.sk/i/3F-Zp7v-FCc0yA" target="_blank">Бланк задания</a></p>
+</div>
+<div id="map-use-links" class="section level2">
+<h2><span class="header-section-number">6.2</span> Полезные ссылки с пространственными данными</h2>
+<p><a href="https://www.naturalearthdata.com/downloads/" target="_blank">Данные Natural Earth</a></p>
+<p><a href="http://download.geofabrik.de/" target="_blank">Данные OpenStreetMap</a></p>
+<p><a href="http://www.vsegei.com/ru/info/topo/" target="_blank">Цифровая общегеографическая основа ВСЕГЕИ</a></p>
+<p><a href="https://gadm.org/data.html" target="_blank">Многоуровневое административное деление на мир и на отдельные страны</a></p>
+</div>
+<div id="map-use-methods" class="section level2">
+<h2><span class="header-section-number">6.3</span> Приёмы использования карт</h2>
+<p><a href="map-use.html#map-use">В начало справки ⇡</a></p>
+<table>
+<thead>
+<tr class="header">
+<th>Приёмы</th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>Описания по картам</code></td>
+<td><code>`Графические приёмы`               |</code></td>
+</tr>
+<tr class="even">
+<td><code>Графоаналитические приёмы</code></td>
+<td><code>`Методы математического анализа`   |</code></td>
+</tr>
+<tr class="odd">
+<td><code>Методы математической статистики</code></td>
+<td><code>`Методы сетевого анализа`          |</code></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="map-use-grid" class="section level2">
+<h2><span class="header-section-number">6.4</span> Построение регулярных сеток</h2>
+<p><a href="map-use.html#map-use">В начало справки ⇡</a></p>
+<p>Для построения регулярных сеток используйте инструмент <strong>Вектор – Выборка – Create Grid…</strong>. В строке параметра <strong>Grid type</strong> можно выбрать тип регулярной сетки: точки, линии, прямоугольник, ромб и гексагон. В строках <strong>Horizontal spacing</strong> и <strong>Vertical spacing</strong> указываются размеры ячеек. В строках <strong>Horizontal overlay</strong> и <strong>Vertical overlay</strong> задаётся перекрытие между ячейками. Лучше всего в качестве системы координат указывать проекцию, а результат сохранять либо в шейпфайл, либо в существующую базу данных Geopackage.</p>
+<div class="figure">
+<img src="images/Ref06/Create_grid.png" alt="" />
+<p class="caption">Окно создания регулярной сетки</p>
+</div>
+</div>
+<div id="map-use-calculation" class="section level2">
+<h2><span class="header-section-number">6.5</span> Расчёт значений на сетку территориального деления</h2>
+<p><a href="map-use.html#map-use">В начало справки ⇡</a></p>
+<p>Мы можем рассчитывать количество точек для каждой ячейки в пределах сетки территориального деления. Для этого используется инструмент <strong>Вектор – Анализ – Подсчитать точки в полигоне…</strong>. В этом инструменте указывается слой с соответствующими полигонами и слой с точками, плотность которых мы хотим получить.</p>
+<blockquote>
+<p>Обратите внимание, что под входными слоями можно выставить опцию для учёта только выбранных объектов. Это оправдано в случае, если вы работаете только с частью данных, а обработка занимает продолжительное время.</p>
+</blockquote>
+<p>В качестве поля взвешевания можно указывать численное атрибутивное поле, например, численность населения.</p>
+<div class="figure">
+<img src="images/Ref06/Points_in_grid.png" alt="" />
+<p class="caption">Инструмент расчёта количества точек в ячейках</p>
+</div>
+<p>Для линейных объектов можно использовать инструмент <strong>Вектор – Анализ – Сумма расстояний…</strong>. Он работает аналогично предыдущему инструменту.</p>
+<div class="figure">
+<img src="images/Ref06/Lines_in_grid.png" alt="" />
+<p class="caption">Инструмент расчёта длины линий в ячейках</p>
+</div>
+<p>Для приведения рассчитанных значений ячеек в относительный вид необходимо воспользоваться калькулятором поля. Для ячеек можно рассчитать площадь, зайдя в таблицу атрибутов и нажав на кнопку <img src="images/Ref06/Field_calculator_button.png" />. Для создания нового поля установите соответствующую галочку сверху, а для обновления поля укажите его сверху справа. Для нового поля необходимо указать имя и тип данных. Для расчёта площади можно воспользоваться стандартной функцией <strong>$area</strong>.</p>
+<div class="figure">
+<img src="images/Ref06/Field_calculator.png" alt="" />
+<p class="caption">Расчет площади через калькулятор поля</p>
+</div>
+<blockquote>
+<p>Обратие внимание, что функция <strong>$area</strong> считает площадь на эллипсоиде, а не в проекции.</p>
+</blockquote>
+<p>Для расчёта относительных значений вы можете написать соответствующее выражение из отдельных атрибутивных полей, выбрав их названия в разделе <strong>Поля и значения</strong>.</p>
+</div>
+<div id="map-use-surface" class="section level2">
+<h2><span class="header-section-number">6.6</span> Построение геополей</h2>
+<p><a href="map-use.html#map-use">В начало справки ⇡</a></p>
+<p>При построении геополей с помощью геоинформационных инструментов мы переходим к растровой модели данных.</p>
+<blockquote>
+<p>Растр – регулярно-ячеистая модель данных, где каждой ячейке (пикселю) соответствует какое-либо значение.</p>
+</blockquote>
+<p>Один из инструментов континуализации – построение поверхности ядерной плотности (kernel density), которая также известна за рубежом как тепловая карта (heatmap).</p>
+<table>
+<tbody>
+<tr class="odd">
+<td><em>Карпачевский А.М.</em> <strong>Картография: практикум в QGIS</strong>. М.: Географический факультет МГУ, 2020.</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+            </section>
+
+          </div>
+        </div>
+      </div>
+<a href="map-generalize.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page"><i class="fa fa-angle-left"></i></a>
+
+    </div>
+  </div>
+<script src="libs/gitbook-2.6.7/js/app.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/lunr.js"></script>
+<script src="libs/gitbook-2.6.7/js/clipboard.min.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-search.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-sharing.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-fontsettings.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-bookdown.js"></script>
+<script src="libs/gitbook-2.6.7/js/jquery.highlight.js"></script>
+<script src="libs/gitbook-2.6.7/js/plugin-clipboard.js"></script>
+<script>
+gitbook.require(["gitbook"], function(gitbook) {
+gitbook.start({
+"sharing": {
+"github": false,
+"facebook": true,
+"twitter": true,
+"linkedin": false,
+"weibo": false,
+"instapaper": false,
+"vk": false,
+"all": ["facebook", "twitter", "linkedin", "weibo", "instapaper"]
+},
+"fontsettings": {
+"theme": "white",
+"family": "sans",
+"size": 2
+},
+"edit": {
+"link": null,
+"text": null
+},
+"history": {
+"link": null,
+"text": null
+},
+"view": {
+"link": null,
+"text": null
+},
+"download": ["cartography-course.pdf", "cartography-course.epub"],
+"toc": {
+"collapse": "subsection"
+}
+});
+});
+</script>
+
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+  (function () {
+    var script = document.createElement("script");
+    script.type = "text/javascript";
+    var src = "true";
+    if (src === "" || src === "true") src = "https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML";
+    if (location.protocol !== "file:")
+      if (/^https?:/.test(src))
+        src = src.replace(/^https?:/, '');
+    script.src = src;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  })();
+</script>
+</body>
+
+</html>
