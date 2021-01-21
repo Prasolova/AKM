@@ -1,5 +1,5 @@
 book_filename: "akm-course"
-chapter_name: "Справка "
+chapter_name: "chapter "
 output_dir: docs
 rmd_files:
     - "index.Rmd"
